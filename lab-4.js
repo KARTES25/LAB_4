@@ -13,13 +13,14 @@ let images = [
 './s12.gif'];
 let i = 0;
 let j = 1000;
+let timerId;
 function viewImages() {
     document.getElementById('img_main').src = images[i]; 
     i++;
     if (i == images.length) {
         i = 0;
     }
-    let timerId = setTimeout("viewImages()",j);
+    timerId = setTimeout("viewImages()",j);
 };
 function bis(){
     j=j-300;
