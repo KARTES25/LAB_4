@@ -20,7 +20,7 @@ function viewImages() {
     if (i == images.length) {
         i = 0;
     }
-    timerId = setTimeout("viewImages()",j);
+    timerId = setTimeout(viewImages,j);
 };
 function bis(){
     j=j-300;
