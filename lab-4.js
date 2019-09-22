@@ -13,6 +13,14 @@ let images = [
 './s12.gif'];
 let i = 0;
 let j = 1000;
+function viewImages() {
+    document.getElementById('img_main').src = images[i]; 
+    i++;
+    if (i == images.length) {
+        i = 0;
+    }
+    let timerId = setTimeout("viewImages()",j);
+};
 function bis(){
     j=j-300;
 }
@@ -20,16 +28,9 @@ function med(){
      j=j+300;
 }
 function stop(){
-    j = Infinity;
+    clearTimeout(timerId);
 }
-function viewImages() {
-    document.getElementById('img_main').src = images[i]; 
-    i++;
-    if (i == images.length) {
-        i = 0;
-    }
-let timerId = setTimeout("viewImages()",j);
-};
+
     
     
    
